@@ -139,12 +139,14 @@ First up, let's create our own asset. You can do so by running the following com
 ./build/token-cli action create-asset
 When you are done, the output should look something like this:
 
+```
 database: .token-cli
 address: token1rvzhmceq997zntgvravfagsks6w0ryud3rylh4cdvayry0dl97nsjzf3yp
 chainID: Em2pZtHr7rDCzii43an2bBi1M2mTFyLN33QP1Xfjy7BcWtaH9
 metadata (can be changed later): MarioCoin
 continue (y/n): y
 ✅ txID: 27grFs9vE2YP9kwLM5hQJGLDvqEY9ii71zzdoRHNGC4Appavug
+```
 txID is the assetID of your new asset.
 
 The "loaded address" here is the address of the default private key (demo.pk). We use this key to authenticate all interactions with the tokenvm.
@@ -154,29 +156,30 @@ After we've created our own asset, we can now mint some of it. You can do so by 
 
 ./build/token-cli action mint-asset
 When you are done, the output should look something like this (usually easiest just to mint to yourself).
-
+```
 database: .token-cli
 address: token1rvzhmceq997zntgvravfagsks6w0ryud3rylh4cdvayry0dl97nsjzf3yp
 chainID: Em2pZtHr7rDCzii43an2bBi1M2mTFyLN33QP1Xfjy7BcWtaH9
 assetID: 27grFs9vE2YP9kwLM5hQJGLDvqEY9ii71zzdoRHNGC4Appavug
 metadata: MarioCoin supply: 0
 recipient: token1rvzhmceq997zntgvravfagsks6w0ryud3rylh4cdvayry0dl97nsjzf3yp
-amount: 10000
+amount: 15000
 continue (y/n): y
 ✅ txID: X1E5CVFgFFgniFyWcj5wweGg66TyzjK2bMWWTzFwJcwFYkF72
+```
 #### Step 3: View Your Balance
 Now, let's check that the mint worked right by checking our balance. You can do so by running the following command from this location:
 
 ./build/token-cli key balance
 When you are done, the output should look something like this:
-
+```
 database: .token-cli
 address: token1rvzhmceq997zntgvravfagsks6w0ryud3rylh4cdvayry0dl97nsjzf3yp
 chainID: Em2pZtHr7rDCzii43an2bBi1M2mTFyLN33QP1Xfjy7BcWtaH9
 assetID (use TKN for native token): 27grFs9vE2YP9kwLM5hQJGLDvqEY9ii71zzdoRHNGC4Appavug
 metadata: MarioCoin supply: 10000 warp: false
-balance: 10000 27grFs9vE2YP9kwLM5hQJGLDvqEY9ii71zzdoRHNGC4Appavug
-
+balance: 15000 27grFs9vE2YP9kwLM5hQJGLDvqEY9ii71zzdoRHNGC4Appavug
+```
 
 Closing the Local Avalanche Network:
 To shut down the local Avalanche network, run:
